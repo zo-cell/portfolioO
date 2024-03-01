@@ -1,0 +1,78 @@
+/* =====================================
+    table of content
+========================================
+1. Left Section
+2. Right Section ==> Animation*/
+
+
+
+
+section.hero {
+  margin-top: 3rem;
+}
+
+
+/* =====================================
+    1. Left Section
+========================================*/
+section.hero div.left-section {
+  flex-grow: 1;
+}
+section.hero div.left-section img.avatar {
+  width: 80px;
+  border: 1px solid darkorange;
+  border-radius: 50%;
+  padding:  .1rem;
+}
+section.hero div.left-section span.icon-verified {
+  color: var(--blue)
+}
+
+section.hero h1.title {
+  font-size: 2.85rem;
+  line-height:  3.3rem;
+  margin: 24px 0;
+  color: var(--title);
+}
+section.hero p.sub-title {
+  color: var(--subtitle);
+  font-size: .9rem;
+  line-height: 1.65rem;
+  margin-bottom: 32px
+}
+
+section.hero .icons {
+  font-size: 1.3rem;
+  gap: 1.5rem;
+  color: var(--subtitle);
+}
+section.hero .icons .icon:hover {
+  transition: .3s;
+  /* font-size: 1.4rem; */
+  color: var(--icon-hover);
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* =====================================
+    2. Right Section ==> Animation
+========================================*/
+.hero-animation {
+  width: 400px;
+}
+
+
+
+
+
+@media (max-width: 1250px) {
+  .hero-animation {
+    display: none;
+  }
+}

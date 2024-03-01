@@ -1,0 +1,145 @@
+/* =====================================
+    table of content
+========================================
+1. Left Section ==> Buttons
+2. Right Section ==> Cards
+3. Media Query
+*/
+
+
+
+
+/* =====================================
+    1. Left Section ==> Buttons
+========================================*/
+main {
+    display: flex;
+    gap: 2rem;
+}
+main section.left-section.flex {
+    flex-direction: column;
+    gap: 10px;
+}
+main section.left-section.flex button {
+    width: 11rem;
+    background-color: rgba(36, 37, 46, 1);
+    text-align: center;
+    padding: 0.75rem 0;
+    border-radius: 5px;
+    font-size: 1.05rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+.light main section.left-section.flex button {
+    background-color: black;
+}
+main section.left-section.flex button:hover {
+    opacity: 1;
+}
+main section.left-section.flex button.active {
+    border: 1px solid var(--blue);
+    font-weight: bold;
+    letter-spacing: .6px;
+    opacity: 1;
+}
+
+
+
+
+
+/* =====================================
+    2. Right Section ==> Cards
+========================================*/
+main section.right-section.flex {
+    flex-grow: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: .7rem;
+
+}
+main section.right-section article.flex {
+    flex-direction: column;
+    /* gap: 20px; */
+    border: 1px solid rgba(93, 188, 252, 0.205);
+    cursor: pointer;
+    transition: .2s;
+}
+.light main section.right-section article.flex {
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.267), 1px 5px 5px rgba(0, 0, 0, 0.267);
+}
+main section.right-section article.flex:hover {
+    border: 1px solid var(--blue);
+    rotate: 2deg;
+}
+main section.right-section article.flex img {
+    width: 225px;
+    height:  140px;
+}
+section.right-section article.flex .box {
+    padding: 0 .5rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.199),black);
+}
+.light section.right-section article.flex .box {
+    background: linear-gradient(rgba(255, 255, 255, 0.199),rgba(0, 0, 0, 0.253));
+
+}
+section.right-section article.flex .box .title {
+    margin-top: 1.1rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: var(--title);
+}
+section.right-section article.flex .box .sub-title {
+    margin-bottom: 1rem;
+    font-size: .8rem;
+    color: var(--subtitle);
+}
+section.right-section article.flex .box .icons {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .8rem;
+    width: 100%;
+    height: 1.3rem;
+}
+section.right-section article.flex .icons .icon-github , section.right-section article.flex .icons .icon-link {
+    color: var(--subtitle);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: .2s;
+}
+section.right-section article.flex .icons .icon-github:hover , section.right-section article.flex .icons .icon-link:hover {
+    color: var(--icon-hover);
+    font-size: 1.2rem;
+}
+section.right-section article.flex .icons .link.flex {
+    gap: .3rem;
+    color: var(--blue);
+    opacity: .6;
+}
+section.right-section article.flex .icons .link.flex:hover {
+    opacity: 1;
+}
+
+
+
+
+
+/* =====================================
+    3. Media Query
+========================================*/
+@media (max-width: 500px) {
+    main {
+        flex-direction: column;
+    }
+    main section.left-section.flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    main section.right-section.flex {
+        justify-content: center;
+    }
+}

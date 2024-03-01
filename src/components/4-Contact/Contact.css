@@ -1,0 +1,136 @@
+
+
+/* ===================================
+    1- Title Design
+======================================*/
+section.contact.flex {
+  flex-direction: column;
+  align-items: start;
+}
+section.contact.flex h1.title.flex {
+  font-size: 2rem;
+  margin-bottom: .3em;
+  color: var(--title);
+}
+section.contact.flex h1.title.flex span {
+  margin-right:  .5em;
+  font-size: 1.7rem;
+  color: var(--subtitle);
+}
+section.contact.flex p.sub-title {
+  color: var(--subtitle);
+  font-size: .9rem;
+  margin-bottom: 3rem;
+}
+
+
+
+
+/* ===================================
+    2- Contact Form Section
+======================================*/
+section.contact label {
+  color: var(--subtitle);
+}
+section.contact #email ,
+section.contact #message {
+  all: unset;
+  background-color: rgba(63, 63, 70, 0.15);
+  border: 1px solid rgb(63 63 70);
+  border-radius: 5px;
+  width: 16rem;
+  padding: .5rem 1rem;
+  color: var(--title);
+  transition: .3s;
+}
+.light section.contact #email ,
+.light section.contact #message {
+  background-color: rgba(245, 245, 245, 0.671);
+  border: 1px solid rgba(73, 73, 75, 0.418);
+}
+section.contact #message {
+  min-height: 9rem;
+  resize: vertical;
+}
+section.contact form div.flex {
+  gap: 1rem;
+}
+section.contact #email:focus ,
+section.contact #message:focus,
+section.contact #email:hover ,
+section.contact #message:hover {
+  border: 1px solid rgb(45 212 191);
+}
+
+.light section.contact #message:focus,
+.light section.contact #email:hover ,
+.light section.contact #email:focus ,
+.light section.contact #message:hover {
+  border: 1px solid rgba(73, 73, 75, 0.952);
+}
+
+.submit {
+  background-color:  rgba(36 37 46 / 1);
+  padding: .57rem 2rem;
+  text-align: center;
+  font-size: 1.05rem;
+  text-transform: capitalize;
+  border-radius:  8px;
+  transition: .3s;
+  margin-top: 1.8rem;
+  border: 1px solid rgb(63 63 70);
+}
+.submit:hover {
+  scale: 0.97;
+}
+.message {
+  margin-top: 1rem;
+  color: var(--subtitle)
+}
+
+
+
+/* ===================================
+    3- Animation Section
+======================================*/
+
+
+
+
+
+/* ===================================
+    4- Media Query
+======================================*/
+@media (max-width: 1100px) {
+  .contact-animation {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .animation {
+    display: none;
+  }
+  .contact_form_animation_div {
+    width: 100%;
+  }
+  section.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  section.contact form div.flex {
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+  }
+  section.contact #email ,
+  section.contact #message {
+    width: 100%;
+    padding: .5rem 0;
+  }
+  .submit {
+    width: 30%;
+    align-self: center;
+  }
+}
